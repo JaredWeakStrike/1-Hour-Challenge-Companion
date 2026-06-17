@@ -1146,6 +1146,7 @@ Armor Xemnas II:
   - Xaldin
   - Riku
   - Roxas
+  - Luxord
   blacklist_destination:
   - Pete OC II #Getting stuck in the wall can softlock depending on if Sora gets hit by a falling boulder
   - Pete TR #one-to-one consistency
@@ -3479,7 +3480,7 @@ Larxene:
   - Riku
   - Cerberus
   - Luxord
-  - Armored Xemnas I
+  - Armor Xemnas I
   - Thresholder # Can not reappear after a teleport
   can_be_enemy: false #expensive
   enabled: true
@@ -3769,6 +3770,7 @@ Luxord:
   - Cloud
   - Pete OC II
   - Pete TR
+  - Armor Xemnas II
   tags:
   - organization
   - solo
@@ -5737,11 +5739,12 @@ The Experiment:
   blacklist_destination:
   - Pete OC II # takes too much time and memory?
   - Axel I # Proactive ban due to RC?
-  - Armored Xemnas II
+  - Armor Xemnas II
   - Scar
   - Cloud
   - Jafar
   - Final Xemnas
+  - Armor Xemnas I
   type: boss
   # these might need to be adds or something different
   # I'm also not including them in the size calculation, which might be wrong
