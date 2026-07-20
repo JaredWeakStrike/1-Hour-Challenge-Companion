@@ -9,3 +9,7 @@ This modpack must be placed ABOVE ALL OTHER MODS, INCLUDING THE SEED. The modpac
 - JaredWeakstrike's 100 Acre Orb
 - JaredWeakstrike's Engine Core Skip
 - Geek's Bonus Speed Up
+
+#New changes
+-munny pouches now give 1k instead of 5
+-mouse skip
