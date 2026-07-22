@@ -18,6 +18,10 @@ assets:
   method: copy
   source:
   - name: scripts/CarpetMagicSkip.lua
+- name: scripts/OneMinuteFightSkip.lua
+  method: copy
+  source:
+  - name: scripts/OneMinuteFightSkip.lua
 #Moose
 - name: dll/KH2Moose.dll
   method: copy
