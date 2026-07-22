@@ -11,5 +11,7 @@ This modpack must be placed ABOVE ALL OTHER MODS, INCLUDING THE SEED. The modpac
 - Geek's Bonus Speed Up
 
 #New changes
--munny pouches now give 1k instead of 5
--mouse skip
+- munny pouches now give 1k instead of 5
+- mouse skip
+- 1 minute fight skips
+- Carpet Magic Section skip
