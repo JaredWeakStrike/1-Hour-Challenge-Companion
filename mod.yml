@@ -5,15 +5,19 @@ assets:
 - name: scripts/F266B00B GoA ROM.lua
   method: copy
   source:
-  - name: F266B00B GoA ROM.lua
+  - name: scripts/F266B00B GoA ROM.lua
 - name: scripts/DriveLogic.lua
   method: copy
   source:
-  - name: DriveLogic.lua
+  - name: scripts/DriveLogic.lua
 - name: scripts/BonusSpeedUp.lua
   method: copy
   source:
-  - name: BonusSpeedUp.lua
+  - name: scripts/BonusSpeedUp.lua
+- name: scripts/CarpetMagicSkip.lua
+  method: copy
+  source:
+  - name: scripts/CarpetMagicSkip.lua
 #Moose
 - name: dll/KH2Moose.dll
   method: copy
