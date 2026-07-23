@@ -62,8 +62,12 @@ if true then --Define current values for common addresses
 end
 
 if Place == 3591 and Map==4 and Btl==14 and Evt == 17 then
-	WriteByte(Save+0x0AD2+4,10)
-    Warp(0x07,0x0B,0x00,0x01)
+	Warp(0x07,0x0B,0x00,0x01) -- warp to ruined chamber
+	WriteByte(Save+0x0AD2+4,0x0A)--set cutscene in the ruined chamber to play
 end
 
+if Place == 3591 and Map==61 and Btl == 61 and Evt==61 then -- auto scroll carpet skip
+	Warp(0x07,0x06,0x33,0x00,0x00,0x14) -- warp to save point room
+	WriteByte(Save+0x0AA2+4,0x0A) -- set genie jafar flag
+end
 end
