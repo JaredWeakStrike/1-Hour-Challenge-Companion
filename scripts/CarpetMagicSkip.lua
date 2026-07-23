@@ -9,24 +9,21 @@ if GAME_ID == 0x431219CC and ENGINE_TYPE == 'BACKEND' then --PC
 	OnPC = true
 	if ReadString(0x9A9330,4) == 'KH2J' then --EGS
 		GameVersion = 2
-		print('GoA Epic Version')
 		Save = 0x09A9330
 		Now = 0x0716DF8
 	elseif ReadString(0x9A98B0,4) == 'KH2J' then --Steam Global
 		GameVersion = 3
-		print('GoA Steam Global Version')
 		Save = 0x09A98B0
 		Now = 0x0717008
 	elseif ReadString(0x9A98B0,4) == 'KH2J' then --Steam JP (same as Global for now)
 		GameVersion = 4
-		print('GoA Steam JP Version')
 		Save = 0x09A98B0
 		Now = 0x0717008
 	end
 end
 
 end
-Slot1    = 0x2A23018
+
 function Warp(W,R,D,M,B,E) --Warp into the appropriate World, Room, Door, Map, Btl, Evt
 M = M or ReadShort(Save + 0x10 + 0x180*W + 0x6*R)
 B = B or ReadShort(Save + 0x10 + 0x180*W + 0x6*R + 2)

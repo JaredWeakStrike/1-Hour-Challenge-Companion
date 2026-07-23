@@ -15,3 +15,4 @@ This modpack must be placed ABOVE ALL OTHER MODS, INCLUDING THE SEED. The modpac
 - mouse skip
 - 1 minute fight skips
 - Carpet Magic Section skip
+- Skip lighting the lanturns in Beast Castle

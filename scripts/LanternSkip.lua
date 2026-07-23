@@ -1,7 +1,7 @@
 
 function _OnInit()
 GameVersion = 0
-print('One Minute Fight Skip')
+print('Beast Castle Lanturn Skip')
 end
 
 function GetVersion() --Define anchor addresses
@@ -11,20 +11,14 @@ if GAME_ID == 0x431219CC and ENGINE_TYPE == 'BACKEND' then --PC
 		GameVersion = 2
 		Save = 0x09A9330
 		Now = 0x0716DF8
-		--Timer = 0x0ABB2D0
-		RealTimer = 0xABB2DC
 	elseif ReadString(0x9A98B0,4) == 'KH2J' then --Steam Global
 		GameVersion = 3
 		Save = 0x09A98B0
 		Now = 0x0717008
-		--Timer = 0x0ABB850
-		RealTimer = 0xABB85C
 	elseif ReadString(0x9A98B0,4) == 'KH2J' then --Steam JP (same as Global for now)
 		GameVersion = 4
 		Save = 0x09A98B0
 		Now = 0x0717008
-		--Timer = 0x0ABB850
-		RealTimer = 0xABB85C
 	end
 end
 
@@ -49,7 +43,7 @@ end
 function Events(M,B,E) --Check for Map, Btl, and Evt
 return ((Map == M or not M) and (Btl == B or not B) and (Evt == E or not E))
 end
---
+
 function _OnFrame()
 if GameVersion == 0 then --Get anchor addresses
 	GetVersion()
@@ -64,13 +58,19 @@ if true then --Define current values for common addresses
 	Evt    = ReadShort(Now+0x08)
 end
 
---LoD Minute Fight Skip
-if Place == 0x0708 and Events(73,73,73) then
-	WriteInt(RealTimer, 5 * 60) -- makes lod minute fight start at 5 seconds
-end
---PR Minute Fight Skip
-if Place == 0x0910 and Events(59,59,59) then
-	WriteInt(RealTimer, 5 * 60) -- makes pr minute fight start at 5 seconds
-end
+if Place==3077 and Map==2 and Btl==22 and Evt==2 then
+	WriteByte(Save+0x07D8,0)
+	WriteByte(Save+0x07D8+2,1)
+	WriteByte(Save+0x07D8+4,0)
 
+	WriteByte(Save+0x07C0,5) -- place 2053 west hall
+	WriteByte(Save+0x07C0+2,2)
+	WriteByte(Save+0x07C0+4,0)
+	
+	WriteByte(Save+0x07C6,0) --west wing
+	WriteByte(Save+0x07C6+2,1)
+	WriteByte(Save+0x07C6+4,0)
+
+	WriteByte(Save+0x07A2+4,1) -- start beast fight
+end
 end

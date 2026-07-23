@@ -22,6 +22,10 @@ assets:
   method: copy
   source:
   - name: scripts/OneMinuteFightSkip.lua
+- name: scripts/LanternSkip.lua
+  method: copy
+  source:
+  - name: scripts/LanternSkip.lua
 #Moose
 - name: dll/KH2Moose.dll
   method: copy
