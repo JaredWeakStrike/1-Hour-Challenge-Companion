@@ -16,3 +16,4 @@ This modpack must be placed ABOVE ALL OTHER MODS, INCLUDING THE SEED. The modpac
 - 1 minute fight skips
 - Carpet Magic Section skip
 - Skip lighting the lanturns in Beast Castle
+- Now skips the oasis run in Pride Lands 2
