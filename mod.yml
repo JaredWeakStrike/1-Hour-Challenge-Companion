@@ -26,6 +26,14 @@ assets:
   method: copy
   source:
   - name: scripts/LanternSkip.lua
+- name: scripts/WardrobeSkip.lua
+  method: copy
+  source:
+  - name: scripts/WardrobeSkip.lua
+- name: scripts/PrideLandsTwoSimbaSkip.lua
+  method: copy
+  source:
+  - name: scripts/PrideLandsTwoSimbaSkip.lua
 #Moose
 - name: dll/KH2Moose.dll
   method: copy

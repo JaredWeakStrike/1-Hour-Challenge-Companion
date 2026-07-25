@@ -1295,7 +1295,7 @@ if Place == 0x1A04 then
 		elseif Progress == 11 then --[Before Genie Jafar, Before Lexaeus]
 			WarpRoom = 0x0F
 		elseif Progress == 12 then --Post 2nd Visit
-			WarpRoom = 0x06
+			WarpRoom = 0x0F --changing this
 		end
 	elseif PostSave == 1 then --The Peddler's Shop (Rich)
 		WarpRoom = 0x0F
@@ -1389,7 +1389,7 @@ if Place == 0x1A04 then
 		elseif Progress == 12 then --Before Zexion
 			WarpRoom = 0x0A
 		elseif Progress == 13 then --Post 2nd Visit
-			WarpRoom = 0x03
+			WarpRoom = 0x0A -- changing this
 		end
 	elseif PostSave == 1 then --Underworld Entrance
 		WarpRoom = 0x03
@@ -1816,7 +1816,7 @@ if Place == 0x1A04 then
 		elseif Progress == 10 then --[Medallion Collection, Before Grim Reaper II]
 			WarpRoom = 0x06
 		elseif Progress == 11 then --Post 2nd Visit
-			WarpRoom = 0x06
+			WarpRoom = 0x08 -- changing this
 		end
 	elseif PostSave == 1 then --Rampart
 		WarpRoom = 0x00
@@ -1992,7 +1992,7 @@ elseif Place == 0x0511 and Events(Null,Null,0x0A) then --Package Retrieved
 elseif Place == 0x0811 and Events(Null,Null,0x0A) then --The System's Core
 	WriteByte(Save+0x1EBF,7)
 elseif Place == 0x0911 and Events(0x3B,0x3B,0x3B) then --Destroying the MCP
-	WriteByte(Save+0x1EBE,2) --Post-Story Save
+	WriteByte(Save+0x1EBE,3) --Post-Story Save --changed this to be 3 to spawn next to larxene
 elseif Place == 0x2104 and Events(0x81,0x81,0x81) then --Larxene Defeated
 elseif ReadByte(Save+0x1EBF) == 8 and ReadShort(Save+0x199A) == 0x01 then --1st Visit
 	WriteByte(Save+0x1EBF,0)

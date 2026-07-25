@@ -1,7 +1,7 @@
 
 function _OnInit()
 GameVersion = 0
-print('Beast Castle Lanturn Skip')
+print('Wardrobe Skip')
 
 end
 
@@ -58,39 +58,13 @@ if true then --Define current values for common addresses
 	Btl    = ReadShort(Now+0x06)
 	Evt    = ReadShort(Now+0x08)
 end
---3077
-if Place==2821 and Map==0 and Btl==0 and Evt==3 and ReadByte(Save+0x07A2+4)==1 then
-	--print("skipping the lanturn")
-
-	WriteByte(Save+0x07D8,0)
-	WriteByte(Save+0x07D8+2,1)
-	WriteByte(Save+0x07D8+4,0)
-
-	WriteByte(Save+0x07C0,5) -- place 2053 west hall
-	WriteByte(Save+0x07C0+2,2)
-	WriteByte(Save+0x07C0+4,0)
-	
-	WriteByte(Save+0x07C6,0) --west wing
-	WriteByte(Save+0x07C6+2,1)
-	WriteByte(Save+0x07C6+4,0)
-
-	WriteByte(Save+0x07A2+4,1) -- start beast fight
-end
---print("Place "..Place)
---print("M ap "..Map)
---print("Btl "..Btl)
---print("Evt "..Evt)
---print("Door "..ReadShort(Now+0x02))
---print("Room "..ReadByte(Now+0x01))
---print("World "..ReadByte(Now))
 --before 2053 2 0 3
 -- during 95 95 95
 --after  4 0 5 door 51
---print()
-if Place==2053 and Map==95 and Btl==95 and Evt==95 then
-	WriteByte(Save+0x07D2,1)
-	WriteByte(Save+0x07D2+4,1)
-	Warp(0x05,8,51,4,0,5)
+if Place==2053 and Map==95 and Btl==95 and Evt==95 then -- if pushing wardrobe
+	WriteByte(Save+0x07D2,1) --setting thresholder
+	WriteByte(Save+0x07D2+4,1) --setting thresholder
+	Warp(0x05,8,51,4,0,5) --warp past the wardrobe
 end
 
 end
