@@ -1334,7 +1334,7 @@ elseif Place == 0x0B07 and Events(Null,Null,0x0A) then --Iago's Confession
 elseif Place == 0x0607 and Events(Null,Null,0x0B) then --A Successful Escape
 	WriteByte(Save+0x1D7F,11)
 elseif Place == 0x0007 and Events(Null,Null,0x0A) then --Cosmic Razzle-Dazzle
-	WriteByte(Save+0x1D7E,2) --Post-Story Save
+	WriteByte(Save+0x1D7E,1) --Post-Story Save
 elseif Place == 0x2104 and Events(0x7B,0x7B,0x7B) then --Lexaeus Defeated
 elseif ReadByte(Save+0x1D7F) == 12 and ReadByte(Save+0x0A94) == 0x01 then --1st Visit
 	WriteByte(Save+0x1D7F,0)
@@ -1427,7 +1427,7 @@ elseif Place == 0x0606 and Events(Null,Null,0x0A) then --Voices from the Past
 	WriteByte(Save+0x1D6F,11)
 elseif Place == 0x0E06 and Events(Null,Null,0x0A) then --The Constellation of Heroes
 	WriteByte(Save+0x1D6F,12)
-	WriteByte(Save+0x1D6E,1) --Post-Story Save
+	WriteByte(Save+0x1D6E,2) --Post-Story Save
 elseif Place == 0x2204 and Events(0x7D,0x7D,0x7D) then --Zexion Defeated
 elseif ReadByte(Save+0x1D6F) == 13 and ReadShort(Save+0x0914) == 0x01 then --1st Visit
 	WriteByte(Save+0x1D6F,0)
@@ -1825,7 +1825,7 @@ if Place == 0x1A04 then
 	elseif PostSave == 3 then --Isla De Muerta: Rock Face
 		WarpRoom = 0x10
 	elseif PostSave == 4 then --Ship Graveyard: The Interceptor's Hold
-		WarpRoom = 0x0B
+		WarpRoom = 0x10
 	end
 	WriteShort(BAR(ARD,0x0A,GoAOffset+0x130),WarpRoom,OnPC)
 end
@@ -1864,7 +1864,7 @@ if ReadByte(Save+0x1E9E) > 0 then
 	elseif PrevPlace == 0x1010 then --Isla De Muerta: Rock Face
 		WriteByte(Save+0x1E9E,3)
 	elseif PrevPlace == 0x0B10 then --Ship Graveyard: The Interceptor's Hold
-		WriteByte(Save+0x1E9E,4)
+		WriteByte(Save+0x1E9E,3)
 	end
 end
 --The Interceptor Pirates End Screen
@@ -1970,7 +1970,7 @@ if Place == 0x1A04 then
 	elseif PostSave == 1 then --Pit Cell
 		WarpRoom = 0x00
 	elseif PostSave == 2 then --I/O Tower: Communications Room
-		WarpRoom = 0x05
+		WarpRoom = 0x08
 	elseif PostSave == 3 then --Central Computer Mesa
 		WarpRoom = 0x08
 	end

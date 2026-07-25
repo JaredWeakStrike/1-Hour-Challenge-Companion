@@ -59,13 +59,8 @@ if true then --Define current values for common addresses
 	Evt    = ReadShort(Now+0x08)
 end
 --3077
-if Place==2821 and Map==0 and Btl==0 and Evt==3 and ReadByte(Save+0x07A2+4)==1 then
-	--print("skipping the lanturn")
-
-	WriteByte(Save+0x07D8,0)
-	WriteByte(Save+0x07D8+2,1)
-	WriteByte(Save+0x07D8+4,0)
-
+if Place==3077 and Map==2 and Btl==22 and Evt==2 then
+	Warp(0x05,12,0,0,0,3)
 	WriteByte(Save+0x07C0,5) -- place 2053 west hall
 	WriteByte(Save+0x07C0+2,2)
 	WriteByte(Save+0x07C0+4,0)
@@ -76,6 +71,7 @@ if Place==2821 and Map==0 and Btl==0 and Evt==3 and ReadByte(Save+0x07A2+4)==1 t
 
 	WriteByte(Save+0x07A2+4,1) -- start beast fight
 end
+
 --print("Place "..Place)
 --print("M ap "..Map)
 --print("Btl "..Btl)
@@ -83,14 +79,5 @@ end
 --print("Door "..ReadShort(Now+0x02))
 --print("Room "..ReadByte(Now+0x01))
 --print("World "..ReadByte(Now))
---before 2053 2 0 3
--- during 95 95 95
---after  4 0 5 door 51
---print()
-if Place==2053 and Map==95 and Btl==95 and Evt==95 then
-	WriteByte(Save+0x07D2,1)
-	WriteByte(Save+0x07D2+4,1)
-	Warp(0x05,8,51,4,0,5)
-end
 
 end
