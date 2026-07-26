@@ -66,5 +66,17 @@ if Place==2053 and Map==95 and Btl==95 and Evt==95 then -- if pushing wardrobe
 	WriteByte(Save+0x07D2+4,1) --setting thresholder
 	Warp(0x05,8,51,4,0,5) --warp past the wardrobe
 end
+if Place==2053 and Map==3 and Btl==1 and Evt==0 then -- if pushed wardobe and left
+	WriteByte(Save+0x07D2,1) --setting thresholder
+	WriteByte(Save+0x07D2+4,1) --setting thresholder
+	Warp(0x05,8,0,4,0,5) --warp past the wardrobe
+end
 
+--print("Place "..Place)
+--print("M ap "..Map)
+--print("Btl "..Btl)
+--print("Evt "..Evt)
+--print("Door "..ReadShort(Now+0x02))
+--print("Room "..ReadByte(Now+0x01))
+--print("World "..ReadByte(Now))
 end
