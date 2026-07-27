@@ -1300,7 +1300,7 @@ if Place == 0x1A04 then
 	elseif PostSave == 1 then --The Peddler's Shop (Rich)
 		WarpRoom = 0x0F
 	elseif PostSave == 2 then --Palace Walls
-		WarpRoom = 0x06
+		WarpRoom = 0x0F -- change this if we keep mushrooms the same
 	elseif PostSave == 3 then --The Cave of Wonders: Stone Guardians
 		WarpRoom = 0x09
 	elseif PostSave == 4 then --The Cave of Wonders: Chasm of Challenges
@@ -1392,7 +1392,7 @@ if Place == 0x1A04 then
 			WarpRoom = 0x0A -- changing this
 		end
 	elseif PostSave == 1 then --Underworld Entrance
-		WarpRoom = 0x03
+		WarpRoom = 0x0A -- 0x03 change this if mushrooms
 	elseif PostSave == 2 then --Cave of the Dead: Inner Chamber
 		WarpRoom = 0x0A
 	elseif PostSave == 3 then --The Lock
@@ -1821,7 +1821,7 @@ if Place == 0x1A04 then
 	elseif PostSave == 1 then --Rampart
 		WarpRoom = 0x00
 	elseif PostSave == 2 then --The Black Pearl: Captain's Stateroom
-		WarpRoom = 0x06
+		WarpRoom = 0x10
 	elseif PostSave == 3 then --Isla De Muerta: Rock Face
 		WarpRoom = 0x10
 	elseif PostSave == 4 then --Ship Graveyard: The Interceptor's Hold
@@ -1851,7 +1851,8 @@ elseif Place == 0x0B10 and Events(Null,Null,0x0A) then --The Ship Graveyard
 elseif Place == 0x0E10 and Events(Null,Null,0x0A) then --Retrieve the Medallion!
 	WriteByte(Save+0x1E9F,10)
 elseif Place == 0x0510 and Events(Null,Null,0x0E) then --Into the Ocean
-	WriteByte(Save+0x1E9E,2) --Post-Story Save
+    --print("we warping to the blackpearl from this")
+	WriteByte(Save+0x1E9E,3) --Post-Story Save
 elseif ReadByte(Save+0x1E9F) == 11 and ReadShort(Save+0x1814) == 0x01 then --1st Visit
 	WriteByte(Save+0x1E9F,0)
 end
@@ -1860,11 +1861,12 @@ if ReadByte(Save+0x1E9E) > 0 then
 	if PrevPlace == 0x0010 then --Rampart
 		WriteByte(Save+0x1E9E,1)
 	elseif PrevPlace == 0x0610 then --The Black Pearl: Captain's Stateroom
-		WriteByte(Save+0x1E9E,2)
+		--print("we warping to the blackpearl")
+		WriteByte(Save+0x1E9E,3)
 	elseif PrevPlace == 0x1010 then --Isla De Muerta: Rock Face
 		WriteByte(Save+0x1E9E,3)
 	elseif PrevPlace == 0x0B10 then --Ship Graveyard: The Interceptor's Hold
-		WriteByte(Save+0x1E9E,3)
+		WriteByte(Save+0x1E9E,4)
 	end
 end
 --The Interceptor Pirates End Screen

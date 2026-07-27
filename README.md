@@ -19,3 +19,4 @@ This modpack must be placed ABOVE ALL OTHER MODS, INCLUDING THE SEED. The modpac
 - Now skips the oasis run in Pride Lands 2
 - Skip pushing the wardrobe in bc1
 - Changed goa post savepoints in oc,sp,ag and pr
+- Medallion Skip in pr2

@@ -34,6 +34,10 @@ assets:
   method: copy
   source:
   - name: scripts/PrideLandsTwoSimbaSkip.lua
+- name: scripts/MedallionSkip.lua
+  method: copy
+  source:
+  - name: scripts/MedallionSkip.lua
 #Moose
 - name: dll/KH2Moose.dll
   method: copy
