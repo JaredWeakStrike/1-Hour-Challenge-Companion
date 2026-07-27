@@ -66,11 +66,11 @@ end
 
 --LoD Minute Fight Skip
 if Place == 0x0708 and Events(73,73,73) then
-	WriteInt(RealTimer, 5 * 60) -- makes lod minute fight start at 5 seconds
+	WriteInt(RealTimer, 3 * 60) -- makes lod minute fight start at 5 seconds
 end
 --PR Minute Fight Skip
 if Place == 0x0910 and Events(59,59,59) then
-	WriteInt(RealTimer, 5 * 60) -- makes pr minute fight start at 5 seconds
+	WriteInt(RealTimer, 30 * 60) -- makes pr minute fight start at 5 seconds
 end
 
 end

@@ -60,7 +60,7 @@ if true then --Define current values for common addresses
 end
 --3077
 if Place==3077 and Map==2 and Btl==22 and Evt==2 then
-	Warp(0x05,12,0,0,0,3)
+	Warp(0x05,12,0,0,0,3) --revert drive?
 	WriteByte(Save+0x07C0,5) -- place 2053 west hall
 	WriteByte(Save+0x07C0+2,2)
 	WriteByte(Save+0x07C0+4,0)
